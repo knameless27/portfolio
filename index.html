@@ -9,23 +9,59 @@
   <body>
     <div id="particles-js"></div>
     <div class="container">
-      <div class="home">
-        <h1>Hello! i'm Andres Gonzalez</h1>
-        <h3>
-          I'm a software developer with 2 years of experience, rockin' the
-          Frontend game with Vue.js. Also, no sweat working with Nest.js,
-          Laravel, and Docker. I'm all about crafting slick and functional user
-          interfaces, and I've got the chops to switch gears and dive into
-          different tech and dev environments.
-        </h3>
+      <div class="left-button" id="leftBtn">
+        <a class="button-a">
+          <span class="button-span">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 20"
+              id="chevron"
+              class="chevron-left"
+            >
+              <path
+                d="M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z"
+              />
+            </svg>
+          </span>
+        </a>
       </div>
-      <div class="projects">
-        <h1>My Projects</h1>
-        xd xdxd
+      <div class="content">
+        <div class="home">
+          <h1>Hello! i'm Andres Gonzalez</h1>
+          <h3>
+            I'm a software developer with 2 years of experience, rockin' the
+            Frontend game with Vue.js. Also, no sweat working with Nest.js,
+            Laravel, and Docker. I'm all about crafting slick and functional
+            user interfaces, and I've got the chops to switch gears and dive
+            into different tech and dev environments.
+          </h3>
+        </div>
+        <div class="projects" style="display: none">
+          <h1>My Projects</h1>
+          xd xdxd
+        </div>
+        <div class="contact" style="display: none">
+          <h1>Contact me!</h1>
+          sadasd
+        </div>
       </div>
-      <div class="contact">
-        <h1>Contact me!</h1>
-        sadasd
+      <div class="right-button" id="rightBtn">
+        <button class="button-chevron">
+          <a class="button-a">
+            <span class="button-span">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 20"
+                id="chevron"
+              >
+                <path
+                  d="M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z"
+                />
+              </svg>
+            </span>
+          </a>
+        </button>
+        <button class="button-chevron"></button>
       </div>
     </div>
     <p class="footer">By Knameless.</p>
