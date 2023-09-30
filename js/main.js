@@ -1,3 +1,4 @@
+// particles.js
 const particles = {
   particles: {
     number: {
@@ -111,6 +112,7 @@ const particles = {
 
 particlesJS(particles);
 
+// container
 const leftButton = document.getElementById("leftBtn");
 const rightButton = document.getElementById("rightBtn");
 
@@ -123,11 +125,9 @@ function showContent(event) {
   if (indexContent == -1) indexContent = 0;
   let indexNewElement = getIndex(contents.length, indexContent, event);
 
-  // Oculta el contenido actual
   document.getElementsByClassName(contents[indexContent])[0].style.display =
     "none";
 
-  // Muestra el nuevo contenido
   document.getElementsByClassName(contents[indexNewElement])[0].style.display =
     "";
 
@@ -143,3 +143,44 @@ function getIndex(arrayLength, index, event) {
 
 leftButton.addEventListener("click", () => showContent(-1));
 rightButton.addEventListener("click", () => showContent(1));
+
+// projects
+const list = document.getElementById("list");
+
+const projectImage = document.getElementsByClassName("project-image")[0];
+const projectDescription = document.getElementById("project-description");
+const buttonPj = document.getElementById("button-pj");
+
+projectImage.src = projects[0].image;
+projectDescription.textContent = projects[0].description;
+buttonPj.href = projects[0].url;
+
+projects.forEach(({ name }, i) => {
+  const newButton = document.createElement("button");
+  const textButton = document.createElement("h3");
+  textButton.textContent = name;
+  newButton.appendChild(textButton);
+  newButton.classList.add("button-project");
+  newButton.id = name;
+  list.appendChild(newButton);
+  newButton.addEventListener("click", (e) => {
+    const elementId = e.target.id || e.target.parentElement.id;
+    const project = projects.find((project) => project.name == elementId);
+    projectImage.src = project.image;
+    projectDescription.textContent = project.description;
+    buttonPj.href = project.url;
+  });
+});
+
+// contact
+document.getElementById("sendEmail").addEventListener("click", function () {
+  var mailtoURL =
+    "mailto:" +
+    "andresgvelasquezdev@gmail.com" +
+    "?subject=" +
+    encodeURIComponent(document.getElementById("subject").value) +
+    "&body=" +
+    encodeURIComponent(document.getElementById("body").value);
+
+  window.open(mailtoURL, "_blank");
+});

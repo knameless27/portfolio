@@ -5,6 +5,29 @@
   --grey: rgb(165, 165, 165);
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Thumb (la parte desplazable de la barra) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+  border-radius: 20rem;
+}
+
+/* Cambia el color de la barra de desplazamiento cuando el usuario la está moviendo */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -146,6 +169,198 @@ a::selection {
   position: fixed;
   padding-left: 1%;
   bottom: 0;
+}
+
+.text-home,
+.title-home {
+  text-align: center;
+}
+
+.title-home {
+  padding-bottom: 2%;
+}
+
+.text-home {
+  font-size: 22px;
+}
+
+.project-title {
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.project-image {
+  width: 250px;
+  height: 250px;
+  padding: 2%;
+  border-radius: 20rem;
+  border: 2px solid var(--white);
+}
+
+#container-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+.project-layout {
+  display: flex;
+  gap: 16px;
+}
+
+.list-projects {
+  width: 500px;
+  max-width: 500px;
+  max-height: 425px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.button-project {
+  margin-bottom: 3%;
+  width: 100%;
+  background-color: transparent;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--grey);
+  cursor: pointer;
+}
+
+.button-pj {
+  cursor: pointer;
+  padding: 2%;
+  border: 1px solid var(--grey);
+  border-radius: 15px;
+  color: var(--white);
+  background-color: var(--blackTrans);
+  transition: 0.2s ease;
+}
+
+.button-pj:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-items {
+  padding-top: 2%;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-item {
+  width: 100%;
+  height: 100%; 
+  text-align: center;
+}
+
+.title-contact {
+  padding-bottom: 2%;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 20px;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--grey);
+  outline: 0;
+  font-size: 17px;
+  color: var(--white);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: var(--grey);
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, var(--grey), var(--white));
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  background: var(--blackTrans);
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -1px var(--blackTrans);
+  border: 1px solid var(--grey);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px var(--white),
+    inset -4px -4px 6px -1px var(--grey), -0.5px -0.5px 0px var(--white),
+    0.5px 0.5px 0px var(--white), 0px 12px 10px -10px var(--white);
+  border: 1px solid var(--white);
+  transform: translateY(0.5em);
+}
+
+.btn svg {
+  transition: transform 0.5s;
+}
+
+.btn:hover svg {
+  transform: scale(0.9);
+  fill: var(--white);
 }
 
 @media screen and (max-width: 768px) {
