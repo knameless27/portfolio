@@ -120,6 +120,13 @@ let actualContent = "home";
 
 const contents = ["home", "projects", "contact"];
 
+if (window.screen.width > 768) {
+  contents.forEach((content) => {
+    if (actualContent != content)
+      document.getElementsByClassName(content)[0].style.display = "none";
+  });
+}
+
 function showContent(event) {
   let indexContent = contents.findIndex((content) => content == actualContent);
   if (indexContent == -1) indexContent = 0;

@@ -14,7 +14,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: var(--blackTrans);
 }
 
 /* Thumb (la parte desplazable de la barra) */
@@ -265,7 +265,7 @@ a::selection {
 
 .contact-item {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   text-align: center;
 }
 
@@ -363,8 +363,39 @@ a::selection {
   fill: var(--white);
 }
 
+.separator {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
-  .footer {
+  .footer,
+  .left-button,
+  .right-button {
     display: none;
+  }
+
+  .separator {
+    display: flex;
+  }
+
+  .container {
+    grid-template-columns: auto;
+    max-width: auto;
+  }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+  .project-layout {
+    display: block;
+  }
+  .list-projects {
+    display: contents;
+    overflow: hidden;
+  }
+  .space {
+    padding-top: 15%;
   }
 }
