@@ -3,38 +3,38 @@ const route = "../assets/project-images/";
 const projects = [
   {
     name: "Hermes",
-    image: route + "hermes.png",
+    image: "https://i.postimg.cc/PJGXHS0B/logo-sm-light.png",
     description: "Maked it with vue.js and laravel!",
     url: "https://hermes.cootranshuila.com/login",
   },
   {
     name: "Eye clinic",
-    image: route + "eye.png",
+    image: "https://eyeclinic.solutions/img/Recurso%207.9497f51c.png",
     description: "Maked it with vue.js and laravel!",
     url: "https://eyeclinic.solutions/dashboard",
   },
   {
     name: "Cinema front",
-    image: route + "cinemafront.png",
+    image: "https://i.postimg.cc/QKLcXcGp/cinema.png",
     description: "Maked it with vue.js and conected to cinemaBack!",
     url: "https://goldfish-app-xziuj.ondigitalocean.app/#/",
   },
   {
     name: "Cinema back",
-    image: route + "cinemaback.png",
+    image: "https://i.postimg.cc/QKLcXcGp/cinema.png",
     description:
       "Backend of a functional cinema, maked it with nest.js and conected to mongoDb",
     url: "https://github.com/knameless27/cinemaBack",
   },
   {
     name: "Adolin",
-    image: route + "sword.png",
+    image: "https://i.postimg.cc/Dz7zNp10/sw-ord.jpg",
     description: "Frontend for a library, maked it with vue.js",
     url: "https://github.com/knameless27/Adolin",
   },
   {
     name: "Shallan",
-    image: route + "sword.png",
+    image: "https://i.postimg.cc/Dz7zNp10/sw-ord.jpg",
     description: "Backend for a library, maked it with Node",
     url: "https://github.com/knameless27/Shallan",
   },
