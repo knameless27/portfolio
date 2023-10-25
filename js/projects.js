@@ -60,6 +60,22 @@ const projects = [
     url: "https://github.com/knameless27/For28",
   },
   {
+    name: "JustAFight",
+    image:
+      "https://lh3.googleusercontent.com/SboNuJBHMHvZagM5e9gZtcRu5dOrncXyvlR4AyUSHWHZnWfAA-7pWpTBA5LoYQ0iQD5HvE8-Sy1b-D7UKeKrKvj6ush2EMPFJNmz=s0-e365",
+    description:
+      "project with react.",
+    url: "https://github.com/knameless27/justafight",
+  },
+  {
+    name: "Weather",
+    image:
+      "https://static.vecteezy.com/system/resources/previews/009/344/657/original/sun-transparent-background-free-png.png",
+    description:
+      "project with react.",
+    url: "https://github.com/knameless27/weather",
+  },
+  {
     name: "technical test to cootranshuila",
     image: "https://cdn.bookaway.com/media/files/6170307dae1c407ab619d32d.jpg",
     description: "technical test to get into cootranshuila",
