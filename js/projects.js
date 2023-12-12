@@ -57,7 +57,7 @@ const projects = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Escudo_de_la_Universidad_Surcolombiana.svg/1200px-Escudo_de_la_Universidad_Surcolombiana.svg.png",
     description:
       "project to improve the productivity in the university of colombia, usco.",
-    url: "https://github.com/knameless27/For28",
+    url: "https://knameless27.github.io/For28",
   },
   {
     name: "JustAFight",

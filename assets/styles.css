@@ -1,200 +1,154 @@
-:root {
-  --blackTrans: rgba(21, 19, 19, 0.74);
-  --black: rgb(21, 19, 19);
-  --white: rgb(221, 220, 220);
-  --grey: rgb(165, 165, 165);
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-button {
-  display: none;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--blackTrans);
-}
-
-/* Thumb (la parte desplazable de la barra) */
-::-webkit-scrollbar-thumb {
-  background-color: var(--grey);
-  border-radius: 20rem;
-}
-
-/* Cambia el color de la barra de desplazamiento cuando el usuario la está moviendo */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-#particles-js {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: var(--black);
-  z-index: -1;
-}
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-p::selection,
-text::selection,
-a::selection {
+:root {
+  --black: rgb(57, 55, 58) ;
+  --white: rgb(190, 199, 238);
+  --grey: rgb(180, 179, 202);
+  --red: rgb(180, 120, 120);
+  --blackTrans: rgba(21, 19, 19, 0.74);
+}
+
+html::selection {
   background-color: var(--grey); /* Cambia aquí al color que desees */
   color: var(--blackTrans); /* Cambia aquí al color de texto que desees */
 }
 
+p {
+  text-align: justify;
+}
+
+.content {
+  opacity: 0; /* Inicia con opacidad 0 para la animación de fade in */
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .container {
-  display: grid;
-  grid-template-columns: 5.8rem auto 4rem;
-  align-items: center;
-  gap: 10px;
   color: var(--grey);
   background-color: var(--blackTrans);
   width: 90%;
   max-width: 1200px;
-  background-size: cover;
-  background-position: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 3%;
   padding: 20px 30px;
   position: relative;
   border: 1px solid var(--white);
   border-radius: 15px 15px 15px 15px;
 }
 
-.content {
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-.left-button,
-.right-button {
-  padding: 10px 5px;
-  border: none;
-}
-
-#chevron {
-  fill: var(--white);
-  height: 2rem;
-  padding-left: 15%;
-  padding-top: 5%;
-}
-
-.chevron-left {
-  transform: translate(-50%, 10%) rotate(180deg);
-}
-
-.button-a {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  width: 55%;
-  border: 2px solid var(--white);
-  border-radius: 15px 15px 15px 15px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.button-a:active {
-  background-color: var(--white);
-  #chevron {
-    fill: var(--black);
-  }
-}
-
-.button-a::before {
-  content: "";
-  position: absolute;
-  vertical-align: middle;
-  top: 6px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% - 12px);
-  background-color: var(--black);
-  transition: 0.15s ease-in-out;
-  transform: scaleY(1);
-}
-
-.button-a:hover::before {
-  transform: scaleY(0);
-}
-
-.button-a::after {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: -2px;
-  height: calc(100% + 4px);
-  width: calc(100% - 12px);
-  background-color: var(--black);
-  transition: 0.15s ease-in-out;
-  transform: scaleX(1);
-  /* transition-delay: 0.1s; */
-}
-
-.button-a:hover::after {
-  transform: scaleX(0);
-}
-
-.button-a .button-span {
-  position: relative;
-  z-index: 3;
-}
-
-.button-chevron {
-  background-color: none;
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-}
-
 .footer {
-  color: var(--grey);
-  position: fixed;
+  color: var(--white);
   padding-left: 1%;
   bottom: 0;
 }
 
-.text-home,
-.title-home {
-  text-align: center;
+.home {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: "left right";
 }
 
 .title-home {
+  text-align: center;
   padding-bottom: 2%;
 }
 
 .text-home {
-  font-size: 22px;
+  margin-bottom: 2%;
 }
 
 .project-title {
-  padding-bottom: 2%;
   text-align: center;
+  max-width: 250px;
+}
+
+.experience-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-title {
+  text-align: center;
+  max-width: 150px;
+}
+
+.experience-subtitle {
+  padding: 1%;
+  border-left: 1px solid var(--grey);
+}
+
+.title-project {
+  padding: 3%;
+  border-left: 1px solid var(--grey);
 }
 
 .project-image {
   width: 250px;
   height: 250px;
-  padding: 2%;
+  padding: 3px;
   border-radius: 20rem;
   border: 2px solid var(--white);
+}
+
+.badge {
+  padding: 10px;
+  display: flex;
+  margin-right: 1%;
+  max-width: 200px;
+  border-radius: 15px;
+  align-items: center;
+  border: 1px solid var(--grey);
+}
+
+.vue {
+  color: #3fb27f;
+  background-color: #32475b;
+}
+
+.laravel {
+  color: var(--white);
+  background-color: #aa514a;
+}
+
+.ux {
+  color: var(--white);
+  background-color: #4f68aa;
+}
+
+.web-dev {
+  color: var(--white);
+  background-color: #3b1d63;
+}
+
+.backend {
+  color: var(--white);
+  background-color: #2a5f90;
+}
+
+.badges {
+  display: flex;
+  padding-top: 1%;
+  overflow-x: auto;
+}
+
+.default-image-side {
+  display: flex;
+  margin-left: 30%;
+  order: 0;
 }
 
 #container-image {
@@ -204,21 +158,6 @@ a::selection {
   max-width: 450px;
   width: 100%;
   text-align: center;
-}
-
-.project-layout {
-  display: flex;
-  gap: 16px;
-}
-
-.list-projects {
-  width: 500px;
-  max-width: 500px;
-  max-height: 425px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
 
 .button-project {
@@ -234,9 +173,16 @@ a::selection {
   cursor: pointer;
 }
 
+#button-pj {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
 .button-pj {
   cursor: pointer;
-  padding: 2%;
+  padding: 10px;
   border: 1px solid var(--grey);
   border-radius: 15px;
   color: var(--white);
@@ -347,11 +293,9 @@ a::selection {
 }
 
 .btn:hover {
-  box-shadow: inset 4px 4px 6px -1px var(--white),
-    inset -4px -4px 6px -1px var(--grey), -0.5px -0.5px 0px var(--white),
-    0.5px 0.5px 0px var(--white), 0px 12px 10px -10px var(--white);
+  box-shadow: -0.5px -0.5px 0px var(--white), 0.5px 0.5px 0px var(--white),
+    0px 12px 10px -10px var(--white);
   border: 1px solid var(--white);
-  transform: translateY(0.5em);
 }
 
 .btn svg {
@@ -363,19 +307,36 @@ a::selection {
   fill: var(--white);
 }
 
-.separator {
-  display: none;
+.list-projects {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  columns: 4;
+  column-gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .footer,
-  .left-button,
-  .right-button {
-    display: none;
+#list .container {
+  max-width: 250px;
+  break-inside: avoid;
+}
+
+.containerImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* list-projects es el container grande, el container de cada tarjeta va a ser el container normal (box) */
+
+@media (max-width: 1350px) {
+  .list-projects {
+    width: calc(100% - 40px);
+    columns: 3;
   }
 
-  .separator {
-    display: flex;
+  .project-image {
+    width: 180px;
+    height: 180px;
   }
 
   .container {
@@ -383,19 +344,42 @@ a::selection {
     max-width: auto;
   }
 
-  .content {
-    padding-left: 0;
-    padding-right: 0;
-    overflow: hidden;
+  .home {
+    display: flex;
+    flex-direction: column;
   }
-  .project-layout {
-    display: block;
+
+  .default-image-side {
+    order: -1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home {
+    display: flex;
+    flex-direction: column;
   }
   .list-projects {
-    display: contents;
-    overflow: hidden;
+    columns: 1;
   }
-  .space {
-    padding-top: 15%;
+
+  .footer,
+  .left-button,
+  .right-button {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: auto;
+    max-width: auto;
+  }
+
+  #list .container {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    break-inside: avoid;
   }
 }

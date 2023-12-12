@@ -10,107 +10,170 @@
 </head>
 
 <body>
-  <div id="particles-js"></div>
-  <div class="container">
-    <div class="left-button" id="leftBtn">
-      <a class="button-a">
-        <span class="button-span">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 20" id="chevron" class="chevron-left">
-            <path
-              d="M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z" />
-          </svg>
-        </span>
-      </a>
-    </div>
-    <div class="content">
-      <div class="home">
-        <h1 class="title-home">Hello! I'm Andres Gonzalez</h1>
-        <h3 class="text-home">
-          I'm a software developer with 5 years of experience, rockin' the
+  <div class="content">
+    <div class="home container">
+      <section class="home-text">
+        <h1 class="title-home">Hello! I'm Andres Gonzalez.</h1>
+        <p class="text-home">
+          Software developer with more than 4 years of experience, rockin' the
           Frontend game with Vue.js and React. Also, no sweat working with Nest.js,
-          Laravel, and Docker. I'm all about crafting slick and functional
+          Laravel, and Docker.
+        </p>
+        <p class="text-home">
+          I'm all about crafting slick and functional
           user interfaces, and I've got the chops to switch gears and dive
           into different tech and dev environments.
+        </p>
+      </section>
+      <section class="default-image-side">
+        <img src="./assets/me.jpg" class="project-image"></img>
+      </section>
+    </div>
+    <div class="experience container">
+      <div class="experience-title-container">
+        <h1 class="experience-title">My Jobs</h1>
+      </div>
+      <section class="job-text">
+        <h3 class="experience-subtitle">
+          Front-end Developer.
         </h3>
+        <h4>
+          Tu Clinica Hispana Familiar - current
+        </h4>
+        <h4>
+          Texas, US - Remote
+        </h4>
+        <p>
+          In my role at Tu Clinica Hispana, I enhanced staff efficiency by 40% through the development of a
+          comprehensive
+          financial monitoring system.
+          Leading the front-end development of the Eye Clinic software, I integrated
+          advanced
+          functionalities and optimized web services using Vue and Laravel.
+        </p>
+        <p>
+          This initiative greatly improved patient
+          management, demonstrating my commitment to employing technology for operational excellence and healthcare
+          service
+          optimization.
+        </p>
+        <section class="aptitudes">
+          <b>
+            Aptitudes:
+          </b>
+          <section class="badges">
+            <div class="badge backend">
+              Back-end Development
+            </div>
+            <div class="badge web-dev">
+              Aplications Web Development
+            </div>
+            <div class="badge ux">
+              User Experience Design (UX)
+            </div>
+            <div class="badge laravel">
+              Laravel
+            </div>
+            <div class="badge vue">
+              Vue.Js
+            </div>
+          </section>
+        </section>
+      </section>
+      <hr style="margin: 3%;" />
+      <section class="job-text">
+        <h3 class="experience-subtitle">
+          Front-end Developer.
+        </h3>
+        <h4>
+          Cootranshuila - 2020 / 2023
+        </h4>
+        <h4>
+          Neiva, Colombia
+        </h4>
+        <p>
+          At Cootranshuila, I was at the forefront of developing Hermes, a logistics and accounting software, where I
+          utilized Vue, React, and Laravel to elevate user experience and interface design. My efforts led to an
+          impressive
+          150% increase in revenue by eliminating the need for external platform commissions.
+        </p>
+        <p>
+          I also crafted intuitive
+          dashboards for various user roles, contributing to enhanced decision-making and operational efficiency.
+        </p>
+        <section class="aptitudes">
+          <b>
+            Aptitudes:
+          </b>
+          <section class="badges">
+            <div class="badge backend">
+              Back-end Development
+            </div>
+            <div class="badge web-dev">
+              Aplications Web Development
+            </div>
+            <div class="badge ux">
+              User Experience Design (UX)
+            </div>
+            <div class="badge laravel">
+              Laravel
+            </div>
+            <div class="badge vue">
+              Vue.Js
+            </div>
+          </section>
+        </section>
+      </section>
+    </div>
+    <div class="projects">
+      <h1 class="project-title container">My Projects</h1>
+      <div class="list-projects" id="list">
       </div>
-      <hr class="separator" />
-      <div class="projects">
-        <h1 class="project-title">My Projects</h1>
-        <div class="project-layout">
-          <div id="container-image">
-            <img src="" class="project-image"></img>
-            <h4 id="project-description"></h4>
-            <a href="" id="button-pj" target="_blank">
-              <button class="button-pj">View project!</button>
-            </a>
-          </div>
-          <div class="space"></div>
-          <div class="list-projects" id="list">
-          </div>
+    </div>
+    <div class="contact container">
+      <div class="contact-item ">
+        <h1 class="title-contact">Contact me!</h1>
+        <div class="form__group field">
+          <input type="text" class="form__field" placeholder="Subject!" id="subject">
+          <label class="form__label">Subject!</label>
         </div>
-      </div>
-      <hr class="separator" />
-      <div class="contact">
-        <div class="contact-item ">
-          <h1 class="title-contact">Contact me!</h1>
-          <div class="form__group field">
-            <input type="text" class="form__field" placeholder="Subject!" id="subject">
-            <label for="Subject!" class="form__label">Subject!</label>
-          </div>
-          <div class="form__group field">
-            <textarea id="body" type="text" class="form__field" placeholder="Write your email here!"
-              required=""></textarea>
-            <label for="Write your email here!" class="form__label">Write your email here!</label>
-          </div>
-          <button class="button-pj" id="sendEmail">Send email!</button>
-          <div class="container-items">
-            <a href="https://github.com/knameless27">
-              <button class="btn">
-                <svg width="40" height="50" fill="rgb(221, 220, 220)" xmlns="http://www.w3.org/2000/svg"
-                  data-name="Layer 1" viewBox="0 0 24 24" id="github">
-                  <path
-                    d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z">
-                  </path>
-                </svg>
-              </button>
-            </a>
-            <a href="https://www.linkedin.com/in/andres-camilo-gonzalez-velasquez-658888210/">
-              <button class="btn">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                  fill="rgb(221, 220, 220)" height="50" width="40" version="1.1" id="Capa_1" viewBox="0 0 45.959 45.959"
-                  xml:space="preserve">
+        <div class="form__group field">
+          <textarea id="body" type="text" class="form__field" placeholder="Write your email here!" required=""></textarea>
+          <label class="form__label">Write your email here!</label>
+        </div>
+        <button class="button-pj" id="sendEmail">Send email!</button>
+        <div class="container-items">
+          <a href="https://github.com/knameless27">
+            <button class="btn">
+              <svg width="40" height="50" fill="rgb(221, 220, 220)" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
+                viewBox="0 0 24 24" id="github">
+                <path
+                  d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z">
+                </path>
+              </svg>
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/andres-camilo-gonzalez-velasquez-658888210/">
+            <button class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="rgb(221, 220, 220)"
+                height="50" width="40" version="1.1" id="Capa_1" viewBox="0 0 45.959 45.959" xml:space="preserve">
+                <g>
                   <g>
-                    <g>
-                      <path
-                        d="M5.392,0.492C2.268,0.492,0,2.647,0,5.614c0,2.966,2.223,5.119,5.284,5.119c1.588,0,2.956-0.515,3.957-1.489    c0.96-0.935,1.489-2.224,1.488-3.653C10.659,2.589,8.464,0.492,5.392,0.492z M7.847,7.811C7.227,8.414,6.34,8.733,5.284,8.733    C3.351,8.733,2,7.451,2,5.614c0-1.867,1.363-3.122,3.392-3.122c1.983,0,3.293,1.235,3.338,3.123    C8.729,6.477,8.416,7.256,7.847,7.811z" />
-                      <path d="M0.959,45.467h8.988V12.422H0.959V45.467z M2.959,14.422h4.988v29.044H2.959V14.422z" />
-                      <path
-                        d="M33.648,12.422c-4.168,0-6.72,1.439-8.198,2.792l-0.281-2.792H15v33.044h9.959V28.099c0-0.748,0.303-2.301,0.493-2.711    c1.203-2.591,2.826-2.591,5.284-2.591c2.831,0,5.223,2.655,5.223,5.797v16.874h10v-18.67    C45.959,16.92,39.577,12.422,33.648,12.422z M43.959,43.467h-6V28.593c0-4.227-3.308-7.797-7.223-7.797    c-2.512,0-5.358,0-7.099,3.75c-0.359,0.775-0.679,2.632-0.679,3.553v15.368H17V14.422h6.36l0.408,4.044h1.639l0.293-0.473    c0.667-1.074,2.776-3.572,7.948-3.572c4.966,0,10.311,3.872,10.311,12.374V43.467z" />
-                    </g>
+                    <path
+                      d="M5.392,0.492C2.268,0.492,0,2.647,0,5.614c0,2.966,2.223,5.119,5.284,5.119c1.588,0,2.956-0.515,3.957-1.489    c0.96-0.935,1.489-2.224,1.488-3.653C10.659,2.589,8.464,0.492,5.392,0.492z M7.847,7.811C7.227,8.414,6.34,8.733,5.284,8.733    C3.351,8.733,2,7.451,2,5.614c0-1.867,1.363-3.122,3.392-3.122c1.983,0,3.293,1.235,3.338,3.123    C8.729,6.477,8.416,7.256,7.847,7.811z" />
+                    <path d="M0.959,45.467h8.988V12.422H0.959V45.467z M2.959,14.422h4.988v29.044H2.959V14.422z" />
+                    <path
+                      d="M33.648,12.422c-4.168,0-6.72,1.439-8.198,2.792l-0.281-2.792H15v33.044h9.959V28.099c0-0.748,0.303-2.301,0.493-2.711    c1.203-2.591,2.826-2.591,5.284-2.591c2.831,0,5.223,2.655,5.223,5.797v16.874h10v-18.67    C45.959,16.92,39.577,12.422,33.648,12.422z M43.959,43.467h-6V28.593c0-4.227-3.308-7.797-7.223-7.797    c-2.512,0-5.358,0-7.099,3.75c-0.359,0.775-0.679,2.632-0.679,3.553v15.368H17V14.422h6.36l0.408,4.044h1.639l0.293-0.473    c0.667-1.074,2.776-3.572,7.948-3.572c4.966,0,10.311,3.872,10.311,12.374V43.467z" />
                   </g>
-                </svg>
-              </button>
-            </a>
-          </div>
+                </g>
+              </svg>
+            </button>
+          </a>
         </div>
       </div>
     </div>
-    <div class="right-button" id="rightBtn">
-      <button class="button-chevron">
-        <a class="button-a">
-          <span class="button-span">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 20" id="chevron">
-              <path
-                d="M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z" />
-            </svg>
-          </span>
-        </a>
-      </button>
-      <button class="button-chevron"></button>
-    </div>
+    <p class="footer">By Knameless.</p>
   </div>
-  <p class="footer">By Knameless.</p>
-  <script src="./js/particles.min.js"></script>
   <script src="./js/projects.js"></script>
   <script src="./js/main.js"></script>
 </body>
