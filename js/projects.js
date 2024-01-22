@@ -2,6 +2,12 @@ const route = "../assets/project-images/";
 
 const projects = [
   {
+    name: "Apply Bot",
+    image: "https://www.shutterstock.com/image-vector/chatbot-icon-line-vector-isolate-600nw-1841577400.jpg",
+    description: "A bot to help you to apply easy to linkedin and other webs!",
+    url: "https://github.com/knameless27/apply-bot",
+  },
+  {
     name: "Hermes",
     image: "https://i.postimg.cc/PJGXHS0B/logo-sm-light.png",
     description: "Maked it with vue.js and laravel!",
