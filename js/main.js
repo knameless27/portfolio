@@ -1,40 +1,88 @@
 // projects
 const list = document.getElementById("list");
+const badgesSkills = document.getElementById("badges-skills");
 
 projects.forEach(({ name, image, url, description }, i) => {
-  const container = createHtmlElement({ classList: "container" });
+  const container = createHtmlElement({
+    classList: "job-text",
+    tag: "a",
+    id: `${name}-${i}`,
+    href: url,
+    blank: true,
+  });
 
   const containerImg = createHtmlElement({ classList: "containerImg" });
+  const containerText = createHtmlElement({ classList: "containerText" });
 
   const newImage = createHtmlElement({
     tag: "img",
     classList: "project-image",
     src: image,
   });
-  const title = createHtmlElement({ tag: "h2", textContent: name, classList: "title-project" });
-  const desc = createHtmlElement({ tag: "h4", textContent: description });
-  const anchorVPButton = createHtmlElement({
+  const title = createHtmlElement({
+    tag: "h2",
+    textContent: name,
+  });
+  const desc = createHtmlElement({ tag: "p", textContent: description });
+
+  containerImg.appendChild(newImage);
+  containerText.appendChild(title);
+  containerText.appendChild(desc);
+  container.appendChild(containerImg);
+  container.appendChild(containerText);
+
+  list.appendChild(container);
+});
+
+skills.forEach((text, i) => {
+  const badge = createHtmlElement({
     tag: "a",
-    id: "button-pj",
-    href: url,
+    classList: "badge",
+    id: `${text}-${i}`,
+    textContent: text,
+    href: `https://www.google.com/search?q=${text}`,
     blank: true,
   });
 
-  const viewProjectButton = createHtmlElement({
-    tag: "button",
-    textContent: "View Project!",
-    classList: "button-pj",
-  });
+  badgesSkills.appendChild(badge);
+});
 
-  anchorVPButton.appendChild(viewProjectButton);
-  containerImg.appendChild(newImage);
+const badgesSkillsContainer = document.getElementById("badges-skills");
 
-  container.appendChild(containerImg);
-  container.appendChild(title);
-  container.appendChild(desc);
-  container.appendChild(anchorVPButton);
+const badgesSkillsContent = badgesSkillsContainer.innerHTML;
+badgesSkillsContainer.innerHTML += badgesSkillsContent;
 
-  list.appendChild(container);
+function infiniteScroll() {
+  if (
+    badgesSkillsContainer.scrollLeft ===
+    badgesSkillsContainer.scrollWidth - badgesSkillsContainer.clientWidth
+  ) {
+    badgesSkillsContainer.scrollLeft = 0;
+  } else {
+    badgesSkillsContainer.scrollLeft++;
+  }
+}
+
+setInterval(infiniteScroll, 20);
+
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return (c / 2) * t * t + b;
+  t--;
+  return (-c / 2) * (t * (t - 2) - 1) + b;
+};
+
+document.addEventListener("mousemove", function (event) {
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+  const background = document.getElementById("dynamic-background");
+
+  const gradientX = (mouseX / window.innerWidth) * 100;
+  const gradientY = (mouseY / window.innerHeight) * 100;
+
+  const gradient = `radial-gradient(600px at ${gradientX}% ${gradientY}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
+
+  background.style.background = gradient;
 });
 
 function createHtmlElement({
