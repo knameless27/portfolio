@@ -18,6 +18,7 @@ projects.forEach(({ name, image, url, description }, i) => {
     tag: "img",
     classList: "project-image",
     src: image,
+    alt: name,
   });
   const title = createHtmlElement({
     tag: "h2",
@@ -34,11 +35,19 @@ projects.forEach(({ name, image, url, description }, i) => {
   list.appendChild(container);
 });
 
+function generarLetrasRandom() {
+  return (
+    String.fromCharCode(65 + Math.floor(Math.random() * 26)) +
+    String.fromCharCode(65 + Math.floor(Math.random() * 26)) +
+    String.fromCharCode(65 + Math.floor(Math.random() * 26))
+  );
+}
+
 skills.forEach((text, i) => {
   const badge = createHtmlElement({
     tag: "a",
     classList: "badge",
-    id: `${text}-${i}`,
+    id: `${text}-${i}-${generarLetrasRandom()}`,
     textContent: text,
     href: `https://www.google.com/search?q=${text}`,
     blank: true,
@@ -91,12 +100,14 @@ function createHtmlElement({
   id = "",
   classList = "",
   src = "",
+  alt = "",
   href = "",
   blank = false,
 }) {
   const elementProperties = {
     textContent: textContent,
     src: src,
+    alt: alt,
   };
 
   if (id) elementProperties.id = id;

@@ -85,17 +85,51 @@ html::selection {
   font-size: 3rem;
   line-height: 1;
 }
+
+.home nav {
+  padding-top: 2%;
+}
+
+.home ul {
+  list-style: none;
+}
+
+.home li {
+  padding-bottom: 4%;
+}
+
+.nav-anchor {
+  display: flex;
+}
+
+.nav-line {
+  align-self: center;
+  width: 8px;
+  height: 1px;
+  border-radius: 15px;
+  margin-right: 3%;
+  background-color: var(--text-color);
+  transition: 0.15s ease-out;
+}
+
+.text-nav {
+  font-weight: 500;
+}
+
+.nav-anchor:hover,
+.nav-anchor.active {
+  .nav-line {
+    transform: scale(3, 1);
+    border-radius: 0;
+  }
+  .text-nav {
+    font-weight: 800;
+  }
+}
+
 a {
   text-decoration: none;
   color: var(--text-color);
-}
-.text-home {
-  margin-bottom: 2%;
-}
-
-.project-title {
-  text-align: center;
-  max-width: 250px;
 }
 
 .job-text {
@@ -128,15 +162,10 @@ a {
   margin-top: 1px;
 }
 
-.experience-title {
-  text-align: center;
-  max-width: 150px;
-}
-
 .experience-subtitle {
   margin-top: 1px;
+  font-weight: 900;
 }
-
 
 .project-image {
   width: 80px;
@@ -181,25 +210,6 @@ a {
   transition: scroll 0.3s ease-in-out; /* Transición suave durante 0.3 segundos */
 }
 
-.left-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transform: rotate(180deg);
-}
-
-.right-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.default-image-side {
-  display: flex;
-  margin-left: 30%;
-  order: 0;
-}
-
 #container-image {
   display: flex;
   flex-direction: column;
@@ -207,19 +217,6 @@ a {
   max-width: 450px;
   width: 100%;
   text-align: center;
-}
-
-.button-project {
-  margin-bottom: 3%;
-  width: 100%;
-  background-color: transparent;
-  border-top: 0px;
-  border-right: 0px;
-  border-left: 0px;
-  border-bottom: 1px solid var(--highlight-color);
-  border-radius: 5px;
-  color: var(--text-color);
-  cursor: pointer;
 }
 
 #button-pj {
@@ -260,10 +257,6 @@ a {
   width: 100%;
   height: 100%;
   text-align: center;
-}
-
-.title-contact {
-  padding-bottom: 2%;
 }
 
 .form__group {
@@ -340,7 +333,8 @@ a {
 }
 
 .btn:hover {
-  box-shadow: -0.5px -0.5px 0px var(--highlight-color), 0.5px 0.5px 0px var(--highlight-color),
+  box-shadow: -0.5px -0.5px 0px var(--highlight-color),
+    0.5px 0.5px 0px var(--highlight-color),
     0px 12px 10px -10px var(--highlight-color);
   border: 1px solid var(--highlight-color);
 }
@@ -360,7 +354,8 @@ a {
   align-items: center;
 }
 
-.me img {
+.me img,
+.me-responsive img {
   max-height: 40%;
   max-width: 25%;
   mask-image: linear-gradient(black 80%, transparent);
@@ -370,6 +365,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.me-responsive {
+  display: none;
 }
 
 /* list-projects es el container grande, el container de cada tarjeta va a ser el container normal (box) */
@@ -382,6 +381,46 @@ a {
 }
 
 @media (max-width: 1350px) {
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-list,
+  .me {
+    display: none;
+  }
+
+  .sub-title {
+    margin-top: -10px;
+  }
+
+  .sub-text {
+    margin-top: -1px;
+  }
+
+  .me-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+  }
+
+  .container-items {
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-icons {
+    display: none;
+  }
+
   .containerImg {
     padding-right: 50%;
   }
@@ -404,9 +443,34 @@ a {
 }
 
 @media screen and (max-width: 900px) {
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-list,
+  .me {
+    display: none;
+  }
+  .sub-title {
+    margin-top: -10px;
+  }
+  .sub-text {
+    margin-top: -1px;
+  }
+  .me-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+  }
   .container-items {
     padding-top: 2%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 16px;
   }
   .footer-icons {

@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Front-end Developer skilled in Vue, React, Nest, Laravel, and Docker. Committed to enhancing user experiences and driving innovation. Expertise in UI/UX design, component development, and third-party API integration. Explore my work and see how I've contributed to the success of projects in medical software, logistics, and more!">
   <title>Knameless</title>
   <link rel="stylesheet" href="./assets/styles.css" />
   <link rel="icon" href="assets/moon.ico" type="image/x-icon">
@@ -13,6 +15,9 @@
   <div id="dynamic-background" class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"></div>
   <div class="content">
     <div class="home">
+      <div class="me-responsive">
+        <img src="assets/me.webp" alt="photo of Andres" width="auto" height="auto">
+      </div>
       <section class="home-text">
         <h1 class="title-home">Andres Gonzalez</h1>
         <h3 class="sub-title">
@@ -22,31 +27,49 @@
           I build pixel-perfect, engaging, and accessible digital experiences.
         </p>
       </section>
-      <nav>
+      <nav class="nav-list">
         <ul>
           <li>
-            <a href="#about">About</a>
+            <a class="nav-anchor" href="#about">
+              <span class="nav-line"></span>
+              <span class="text-nav">About</span>
+            </a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a class="nav-anchor" href="#experience">
+              <span class="nav-line"></span>
+              <span class="text-nav">Experience</span>
+            </a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a class="nav-anchor" href="#skills">
+              <span class="nav-line"></span>
+              <span class="text-nav">Skills</span>
+            </a>
           </li>
           <li>
-            <a href="#studies">Studies</a>
+            <a class="nav-anchor" href="#studies">
+              <span class="nav-line"></span>
+              <span class="text-nav">Studies</span>
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a class="nav-anchor" href="#projects">
+              <span class="nav-line"></span>
+              <span class="text-nav">Projects</span>
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact me</a>
+            <a class="nav-anchor" href="#contact">
+              <span class="nav-line"></span>
+              <span class="text-nav">Contact me</span>
+            </a>
           </li>
         </ul>
       </nav>
       <section class="footer-icons">
-        <a target="_blank" href="https://github.com/knameless27">
-          <button class="btn">
+        <a target="_blank" href="https://github.com/knameless27" aria-label="Github">
+          <button class="btn" aria-label="Github">
             <svg width="40" height="50" fill="rgb(221, 220, 220)" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
               viewBox="0 0 24 24" id="github">
               <path
@@ -55,8 +78,9 @@
             </svg>
           </button>
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/andres-camilo-gonzalez-velasquez-658888210/">
-          <button class="btn">
+        <a target="_blank" aria-label="Linkedin"
+          href="https://www.linkedin.com/in/andres-camilo-gonzalez-velasquez-658888210/">
+          <button class="btn" aria-label="Linkedin">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="rgb(221, 220, 220)"
               height="50" width="40" version="1.1" id="Capa_1" viewBox="0 0 45.959 45.959" xml:space="preserve">
               <g>
@@ -75,7 +99,7 @@
     </div>
     <main class="full-content">
       <div class="me">
-        <img src="assets/me.webp" alt="">
+        <img src="assets/me.webp" alt="photo of Andres" width="auto" height="auto">
       </div>
       <section id="about" class="item-section">
         <h2>About me</h2>
@@ -107,9 +131,9 @@
         <a href="https://clinicavirgenguadalupe.com" target="_blank" class="job-text-present">
           <p class="date">2024 - Present</p>
           <div>
-            <h3 class="experience-subtitle">
+            <p class="experience-subtitle">
               Front-end Developer, Clinica Virgen Guadalupe
-            </h3>
+            </p>
             <p>
               In my role at Clinica Virgen GuadalupeI developed a comprehensive financial monitoring system that
               significantly boosted staff efficiency at the clinic. Leading the front-end development of the Clinic360
@@ -131,9 +155,9 @@
         <a href="https://tuclinicahispanafamiliar.com/" target="_blank" class="job-text">
           <p class="date">2023 - 2024</p>
           <div>
-            <h3 class="experience-subtitle">
+            <p class="experience-subtitle">
               Front-end Developer, Tu clinica Hispana Familiar
-            </h3>
+            </p>
             <p>
               In my role at Tu Clinica Hispana, I enhanced staff efficiency by 40% through the development of a
               comprehensive
@@ -161,9 +185,9 @@
         <a href="https://www.cootranshuila.com/" target="_blank" class="job-text">
           <p class="date">2020 - 2023</p>
           <div>
-            <h3 class="experience-subtitle">
+            <p class="experience-subtitle">
               Front-end Developer, Cootranshuila
-            </h3>
+            </p>
             <p>
               At Cootranshuila, I was at the forefront of developing Hermes, a logistics and accounting software, where
               I
@@ -198,13 +222,14 @@
       <section id="studies" class="item-section">
         <h2>Studies</h2>
         <p>
-          I am a Certified <b>Vue Developer</b> trained directly by the creators of the technology, showcasing my expertise in
+          I am a Certified <b>Vue Developer</b> trained directly by the creators of the technology, showcasing my
+          expertise in
           building interactive and dynamic web applications.
         </p>
         <p>
           Additionally, I have a strong background in software
           development acquired at Universidad Surcolombiana, where I gained fundamental <b>knowledge in design and
-          programming.</b>
+            programming.</b>
         </p>
         <p>To complement my profile, I have completed a Python course offered by <b>MIT</b>, expanding my skills in
           developing innovative technological solutions.
@@ -227,10 +252,13 @@
               required=""></textarea>
             <label class="form__label">Write your email here!</label>
           </div>
-          <button class="button-pj" id="sendEmail">Send email!</button>
+          <button class="button-pj" id="sendEmail" aria-label="Send email">Send email!</button>
+          <p style="margin-top: 10%;">
+            Or write to my email: <b>Andresgvelasquezdev@gmail.com</b>
+          </p>
           <div class="container-items">
-            <a target="_blank" href="https://github.com/knameless27">
-              <button class="btn">
+            <a target="_blank" aria-label="Github" href="https://github.com/knameless27">
+              <button class="btn" aria-label="Github">
                 <svg width="40" height="50" fill="rgb(221, 220, 220)" xmlns="http://www.w3.org/2000/svg"
                   data-name="Layer 1" viewBox="0 0 24 24" id="github">
                   <path
@@ -239,8 +267,9 @@
                 </svg>
               </button>
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/andres-camilo-gonzalez-velasquez-658888210/">
-              <button class="btn">
+            <a target="_blank" aria-label="linkedin"
+              href="https://www.linkedin.com/in/andres-camilo-gonzalez-velasquez-658888210/">
+              <button class="btn" aria-label="Linkedin">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   fill="rgb(221, 220, 220)" height="50" width="40" version="1.1" id="Capa_1" viewBox="0 0 45.959 45.959"
                   xml:space="preserve">
